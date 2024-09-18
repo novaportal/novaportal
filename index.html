@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco NovaTrust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <h1>NovaTrust Bank</h1>
+        </div>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Transacciones</a>
+            <a href="#">Historial</a>
+            <a href="#">Ajustes</a>
+        </nav>
+    </header>
+
+    <main class="account-container">
+        <section class="account-info">
+            <h2>Cuenta Bancaria</h2>
+            <div class="details">
+                <p><strong>Nombre:</strong> Adrián Pérez Cachón</p>
+                <p><strong>Número de Cuenta:</strong> 0458-1246-8975</p>
+                <p><strong>Identificación:</strong> 02061564489</p>
+                <p><strong>Dirección:</strong> 3051 Biscayne Blvd, Miami, FL</p>
+                <p><strong>Saldo Disponible:</strong> $25,000 USD</p>
+            </div>
+        </section>
+
+        <section class="transaction-section">
+            <h2>Transacciones Recientes</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Descripción</th>
+                        <th>Importe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>17/09/2024</td>
+                        <td>21:00</td>
+                        <td>Depósito Inicial</td>
+                        <td>$25,000 USD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="transfer-button">
+            <button id="transfer-button">Autorizar Créditos</button>
+        </div>
+
+        <div id="auth-field" style="display: none;">
+            <label for="auth-code">Ingrese clave de 6 dígitos:</label>
+            <input type="password" id="auth-code" maxlength="6">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NovaTrust Bank. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('transfer-button').addEventListener('click', function() {
+            document.getElementById('auth-field').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
